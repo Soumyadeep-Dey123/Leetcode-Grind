@@ -30,3 +30,17 @@ You can return the answer in any order.
 - **Only one valid answer exists.**
 
 **Follow-up:** Can you come up with an algorithm that is less than O(n^2) time complexity?
+
+## Brainstorming
+
+- target = sum of any two digits from the array
+- the indices of the numbers needs to be returned
+- three vars : target, nums[], answer[]
+- can loop through it, or can get there recursively
+- can take an element, divide target/element, search the element in the array
+- But wtf is `O(n^2) time complexity`
+
+## Approach
+
+- Lets ignore the follow up. Loop through the array, find the first element which is a clean divisor of target
+- Once found, loop through the rest of the array and find the other number
