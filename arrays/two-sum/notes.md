@@ -42,5 +42,6 @@ You can return the answer in any order.
 
 ## Approach
 
-- Lets ignore the follow up. Loop through the array, find the first element which is a clean divisor of target
-- Once found, loop through the rest of the array and find the other number
+- Lets ignore the follow up. Loop through the array, find the max element which is smaller than target. `num<target`
+- Once found, try to find the other number. `arr[0]+i==target`
+- If not found, find the second biggest number. `num<target && (arr[0]!=0 ? num<arr[0] : num==arr[0])`
