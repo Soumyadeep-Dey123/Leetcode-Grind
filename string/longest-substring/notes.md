@@ -33,3 +33,4 @@ Given a string `s`, find the length of the longest substring without duplicate c
 - If that charat is in tempS, then check if subS is greater than tempS or not. If it is, then `subS=tempS` and `tempS=""`
 - Finally, return the length of subS
 - If there are no duplicates, then subS will be an empty string. It needs to be checked if subS is shorter than tempS or not. If it is, then the value needs to be switched
+- If a char is present in subS, then a substring of subS needs to be made after that index to the last and assigned back to subS
