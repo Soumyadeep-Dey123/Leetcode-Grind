@@ -20,3 +20,9 @@ You are given two integers `n` and `t`. Return the smallest number greater than 
 
 - `1 <= n <= 100`
 - `1 <= t <= 10`
+
+## Brainstorming
+
+- run a loop starting from n to 100
+- on every iteration, check if the products of digits of n are divisible by t
+- if they are, return the value
