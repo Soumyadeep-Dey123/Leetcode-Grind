@@ -23,3 +23,16 @@ The overall run time complexity should be `O(log (m+n))`.
 - `0 <= n <= 1000`
 - `1 <= m + n <= 2000`
 - `-10^6 <= nums1[i], nums2[i] <= 10^6`
+
+## Brainstorming
+
+- Median is basically the value at the middle most position of the array
+- If there are odd number of elements in an array, there will only be one middle most element. If there are even number of elements, there will be 2 and the average of the two have to calculated
+- In order to calculate the median, first, find median of array 1, and then find median of array 2 and then calcualte the average
+
+## Approach
+
+- Find the length of both arrays
+- If the length is even, then find the average of elements at (length/2) and (length/2)+1 position
+- If the length is odd, find the value of (length/2)+1 element
+- Take these two values and find their average and thats the median
