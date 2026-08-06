@@ -1,39 +1,62 @@
 class Solution {
 
   public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-    double med1 = 0, med2 = 0;
+    int mergedLen = 0;
+    if (nums1.length > 0) {
+      mergedLen = nums1.length % 2 == 0 ? mergedLen + 2 : mergedLen + 1;
+    }
+    if (nums2.length > 0) {
+      mergedLen = nums2.length % 2 == 0 ? mergedLen + 2 : mergedLen + 1;
+    }
+    int[] merged = new int[mergedLen];
     double median = 0.00000;
-    int len_nums1 = nums1.length;
-    int len_nums2 = nums2.length;
-
-    // Calculating median of nums1
-    if (len_nums1 % 2 == 0 && len_nums1 > 1) {
-      med1 = (nums1[(len_nums1 / 2) - 1] + nums1[len_nums1 / 2]) / 2.0;
-    } else if (len_nums1 % 2 != 0 && len_nums1 > 1) {
-      med1 = nums1[len_nums1 / 2];
-    } else if (len_nums1 == 1) {
-      med1 = nums1[0];
-    } else if (len_nums1 < 1) {
-      med1 = 0;
-    }
-
-    // Calculating median of nums2
-    if (len_nums2 % 2 == 0 && len_nums2 > 1) {
-      med2 = (nums2[(len_nums2 / 2) - 1] + nums2[len_nums2 / 2]) / 2.0;
-    } else if (len_nums2 % 2 != 0 && len_nums2 > 1) {
-      med2 = nums2[len_nums2 / 2];
-    } else if (len_nums2 == 1) {
-      med2 = nums2[0];
-    } else if (len_nums2 < 1) {
-      med2 = 0;
-    }
-
-    if (med1 == 0) {
-      median = med2;
-    } else if (med2 == 0) {
-      median = med1;
+    int tempIndex = 0;
+    if (nums1.length > 1) {
+      if (nums1.length % 2 == 0) {
+        merged[0] = nums1[(nums1.length / 2) - 1];
+        merged[1] = nums1[nums1.length / 2];
+        tempIndex = 2;
+      } else if (nums1.length % 2 != 0) {
+        merged[0] = nums1[nums1.length / 2];
+        tempIndex = 1;
+      }
+    } else if (nums1.length == 1) {
+      merged[0] = nums1[0];
+      tempIndex = 1;
     } else {
-      median = (med1 + med2) / 2.00000;
+      tempIndex = 0;
+    }
+
+    if (nums2.length > 1) {
+      if (nums2.length % 2 == 0) {
+        merged[tempIndex] = nums2[(nums2.length / 2) - 1];
+        tempIndex += 1;
+        merged[tempIndex] = nums2[nums2.length / 2];
+      } else if (nums2.length % 2 != 0) {
+        merged[tempIndex] = nums2[nums2.length / 2];
+      }
+    } else if (nums2.length == 1) {
+      merged[tempIndex] = nums2[0];
+    }
+
+    if (merged.length > 1) {
+      // sort array
+      for (int i = 0; i < merged.length - 1; i++) {
+        if (merged[i] > merged[i + 1]) {
+          int temp = merged[i];
+          merged[i] = merged[i + 1];
+          merged[i + 1] = temp;
+        }
+      }
+      if (merged.length % 2 == 0) {
+        median = (merged[(merged.length / 2) - 1] + merged[(merged.length / 2)]) / 2.0;
+      } else if (merged.length % 2 != 0) {
+        median = merged[(merged.length / 2)];
+      }
+    } else if (merged.length == 1) {
+      median = merged[0];
+    } else {
+      median = 0;
     }
     return median;
   }
