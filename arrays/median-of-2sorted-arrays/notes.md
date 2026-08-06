@@ -40,3 +40,9 @@ The overall run time complexity should be `O(log (m+n))`.
 ## Test case failure
 
 - `nums1 = [2,2,4,4]`, `nums1 = [2,2,4,4]`, `output: 2.50000`, `expected: 2.00000`
+
+## New Approach
+
+- Merge arrays, run an endless loop, which stichtes the two arrays together
+- In the loop, run a checker to check which element is bigger than the other and place them accordingly
+- Once array is merged, then just calculate the median
