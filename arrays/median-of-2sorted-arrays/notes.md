@@ -36,3 +36,7 @@ The overall run time complexity should be `O(log (m+n))`.
 - If the length is even, then find the average of elements at (length/2) and (length/2)+1 position
 - If the length is odd, find the value of (length/2)+1 element
 - Take these two values and find their average and thats the median
+
+## Test case failure
+
+- `nums1 = [2,2,4,4]`, `nums1 = [2,2,4,4]`, `output: 2.50000`, `expected: 2.00000`
