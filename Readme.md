@@ -17,3 +17,9 @@
 ```
 
 > _Fun fact: I knew nothing algorithms on Day1_
+
+## Structured Approach
+
+- Will be following [roadmap.sh](https://roadmap.sh/leetcode) roadmap for leetcode(simply bcz its open source and i can do whatever i wanna)
+- Solving one problem per day
+- Mostly focusing on solving easy and medium problems
