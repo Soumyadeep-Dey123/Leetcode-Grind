@@ -5,7 +5,7 @@
 
 ## Folder Structure
 
-```
+```bash
 /
 ├── Readme.md                    (progress tracker, pattern log)
 ├── arrays/
@@ -20,6 +20,6 @@
 
 ## Structured Approach
 
-- Will be following [roadmap.sh](https://roadmap.sh/leetcode) roadmap for leetcode(simply bcz its open source and i can do whatever i wanna)
+- Will be following [Neetcode150](https://neetcode.io/practice/practice/neetcode150) roadmap for leetcode
 - Solving one problem per day
 - Mostly focusing on solving easy and medium problems
