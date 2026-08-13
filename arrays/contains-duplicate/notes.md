@@ -25,3 +25,12 @@ Given an integer array `nums`, return `true` if any value appears at least twice
 
 - `1 <= nums.length <= 10^5`
 - `-10^9 <= nums[i] <= 10^9`
+
+## Brainstorming
+
+**Take 1:**
+
+- HASHTABLE!
+- Iterate through the array
+- On every iteration, check if the element exists in the hashtable
+- If it doesnt, add it to the hashtable and keep on iterating. If it does, program returns true and breaks out
