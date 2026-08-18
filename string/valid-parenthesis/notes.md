@@ -37,3 +37,9 @@ An input string is valid if:
 
 - `1 <= s.length <= 104`
 - `s` consists of parentheses only `'()[]{}'`.
+
+## Brainstorming
+
+- Parenthesis appears to be only valid if they appear in pairs.
+- If it is replaced in pairs by an empty string, eventually itll be empty
+- If it doesnt become empty, it isnt a valid parenthesis string
