@@ -27,3 +27,10 @@ Given a string `s`, return `true` if it is a **_palindrome_**, or `false` otherw
 
 - `1 <= s.length <= 2 * 10^5`
 - `s` consists only of printable ASCII characters.
+
+## Brainstorming
+
+- if the string has only one character, then its already considered a palindrome, true should be returned
+- if the string has more than one char, the string first needs to be turned into lower case, all the characters
+- every space or special character needs to be replaced by a ""
+- once its cleaned, using the two pointer method, check for palindrome
