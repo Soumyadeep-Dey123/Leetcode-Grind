@@ -33,3 +33,11 @@ Your solution must use only constant extra space.
 - `numbers` is sorted in **non-decreasing order**.
 - `-1000 <= target <= 1000`
 - The tests are generated such that there is **exactly one solution**.
+
+## Brainstorming
+
+- create a hashmap, with integer and integer.
+- loop through the array
+- on every iteration, subtract the value of that index from target and see if it exists in the hashmap or not as a key
+- if it doesnt (which it wont in the first iteration), store the value of that index as key and the index+1 as the value in the hashmap
+- if it does exist, return an int array with the value of that element(which is basically its index+1) and the index+1 of the current value (ik, confusing, lets try it)
